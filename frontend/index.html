@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/style.css">
+    <title>reg</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        
+        <div class="container">
+            <main>
+                <form id="my-form">
+                    <div class="email-form">
+                        <label>
+                            <p id="reg-text" class="reg-text-form">Email:</p>
+                            <input id="email" name="email">
+                        </label>
+                    </div>
+                    <div class="login-form">
+                        <label>
+                            <p id="reg-text" class="reg-text-form">Логин:</p>
+                            <input id="login" name="login">
+                        </label>
+                    </div>
+                    <div class="password-form">
+                        <label>
+                            <p id="reg-text" class="reg-text-form">Пароль:</p>
+                            <input id="password" name="password">
+                        </label>
+                    </div>
+
+                    <div id="button-box" class="button-box">
+                        <button class="reg-button" type="submit" id="submit">Зарегистрироваться</button>
+                    </div>
+                </form>
+                <div class="error-register">
+
+                </div>
+                <div class="form-id">
+
+                    <form id="my-form-login">
+                        <div class="log-text-box">
+                            <span class="login-text">
+                                Вход
+                            </span>
+                        </div>
+                        <div class="login-form">
+                            <label>
+                                <p id="reg-text" class="reg-text-form">Логин:</p>
+                                <input id="login-log" name="login-log">
+                            </label>
+                        </div>
+                        <div class="password-form">
+                            <label>
+                                <p id="reg-text" class="reg-text-form">Пароль:</p>
+                                <input id="password-log" name="password-log">
+                            </label>
+                        </div>
+
+                        <div id="button-box" class="button-box">
+                            <button class="reg-button" type="submit" id="submit">Войти</button>
+                        </div>
+                        <div class="error-login">
+
+                        </div>
+                    </form>
+
+                </div>
+
+                <button id="btn-clear-token">Выход</button>
+
+
+                <div class="no-reg">
+                    <span class="no-reg-text">Вы не зарегистрированы</span>
+
+                </div>
+                <div class="reg">
+                    <span class="reg-text">Загрузите свои файлы</span>
+
+                </div>
+
+
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" name="file" id="fileInput">
+                    <button type="submit">Загрузить</button>
+                </form>
+
+
+                <div class="my-files">
+                    <span class="my-files-text">Загруженные файлы:</span>
+                </div>
+
+                <div class="ShowFiles"> 
+
+                    
+                </div> 
+
+
+
+
+
+            </main>
+
+
+
+        </div>
+    </div>
+</body>
+
+<script src="/frontend/reg.js"></script>
+<script src="/frontend/log.js"></script>
+<script src="/frontend/Show.js"></script>
+
+</html>

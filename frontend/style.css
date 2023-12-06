@@ -1,0 +1,116 @@
+/* Стиль для основного контейнера */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(98, 92, 116);
+}
+
+/* Стиль для формы регистрации */
+#my-form {
+    width: 300px;
+    background-color: #b1a9a9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Стиль для элементов внутри формы */
+.email-form,
+.login-form,
+.password-form {
+    margin-bottom: 10px;
+}
+
+/* Стиль для текста формы */
+.reg-text-form {
+    margin: 0;
+}
+
+/* Стиль для полей ввода */
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Стиль для кнопки */
+.reg-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #683697;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Стиль для контейнера ошибки регистрации */
+.error-reg {
+    color: rgb(94, 35, 35);
+    margin-top: 10px;
+}
+
+/* Стиль для формы входа */
+#my-form-login {
+    margin-top: 20px;
+    background-color: #b1a9a9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.no-reg {
+    padding: 10px;
+
+}
+.no-reg-text {
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+
+}
+
+
+
+.my-files {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em
+}
+.my-files-text {
+    color: rgb(255, 255, 255);
+
+}
+
+
+.reg-text {
+    color: #ffffff;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.log-text-box {
+    display: flex;
+    justify-content: center;
+
+}
+.login-text {
+    font-size: 20px;
+    font-weight: bold
+}
+
+.ShowFiles {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    margin-top: 20px;
+    color: #b1a9a9;
+}
+
+
+

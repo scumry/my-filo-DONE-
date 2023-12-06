@@ -1,0 +1,219 @@
+public class ListHero
+{
+    List<Hero> heroes ;
+
+    public ListHero()
+    {
+        heroes = new List<Hero>();
+    }
+
+    public void AddHeroes(Hero addhero)
+    {
+        heroes.Add(addhero);
+        Console.WriteLine(heroes[0]);
+    }
+}
+
+
+
+// Основа Герой // 
+
+public class Hero 
+{
+    public int lvl;
+    public int life;
+    public int mana;
+    public Hero(int lvl, int life, int mana)
+    {
+        this.lvl = lvl;
+        this.life = life;
+        this.mana = mana;
+    }
+    
+
+
+}
+// класс друид //
+public class Druid : Hero
+{   
+
+
+    
+    int spellDamage;
+    int armour;
+
+    string StyleOfPlay = "Средний бой";
+    public Druid(int lvl, int life, int mana, int spellDamage, int armour) : base(lvl, life, mana)
+    {
+        this.spellDamage = spellDamage;
+        this.armour = armour;
+       
+    }
+
+    public int Damage()
+    {
+        return spellDamage * lvl;
+    }
+    public int ArmorDefence()
+    {
+        return armour + lvl * 2;
+    }
+
+    public string StyleOflay()
+    {
+        return StyleOfPlay;
+    }
+}
+  
+// Лучник //
+
+public class Archer : Hero
+{
+    int evasion;
+    int attackDamage;
+
+    public Archer(int lvl, int life, int mana, int evasion, int attackDamage) : base(lvl, life, mana)
+    {
+        this.attackDamage = attackDamage;
+        this.evasion = evasion;
+    }
+
+    public int DefenceLife()
+    {
+        return life * lvl;
+    }
+
+    public int DefenceEvasion()
+    {
+        return evasion * lvl;
+    }
+    public int Attack()
+    {
+        return attackDamage * lvl;
+    }
+}
+
+
+// подкласс Лучника //
+
+public class Ranger : Archer
+    
+{
+    int movementSpeed;
+
+    public Ranger(int lvl, int life, int mana, int evasion, int attackDamage, int movementSpeed) : base(lvl, life, mana, evasion, attackDamage)
+    {
+        this.movementSpeed = movementSpeed;
+    }
+
+    public int Speed()
+    {
+        return movementSpeed * lvl;
+    }
+}
+
+
+
+
+
+
+
+//Основа Снаряжение//
+public class Equipment
+{
+    int weight;
+    int life;
+
+    public Equipment(int weight , int life)
+    {
+        this.weight = weight;
+        this.life = life;
+    }
+}
+
+
+public class ArmourChest : Equipment
+{
+    int flatArmour;
+    int increasedArmour;
+    public ArmourChest(int weight, int life, int flatArmour, int increasedArmour) : base(weight, life)
+    {
+        this.flatArmour = flatArmour;
+        this.increasedArmour = increasedArmour;
+    }
+    public int IncreasedArmour()
+    {
+        return flatArmour * increasedArmour / 100;
+    }
+    public void randomFlatsArmour()
+    {
+        Random rnd = new Random();
+        int randomFlatArmours = rnd.Next(10, 100);
+    }
+}
+    public class EvasionChest : Equipment
+    {
+        int flatEvasion;
+        int increasedEvasion;
+        public EvasionChest(int weight, int life, int flatEvasion, int increasedEvasion) : base(weight, life)
+        {
+            this.flatEvasion = flatEvasion;
+            this.increasedEvasion = increasedEvasion;
+        }
+        public int IncreasedEvasion()
+        {
+            return flatEvasion * increasedEvasion / 100;
+        }
+        public void randomFlatsEvasion()
+        {
+            Random rnd = new Random();
+            int randomFlatEvasion = rnd.Next(10, 100);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class MainClass
+{
+    public static void Main()
+    {
+
+       
+        // Базовые статы героя 
+        Hero hero = new Hero(0, 100, 100);
+
+        //Статы Лучника
+        Archer archer = new Archer(hero.lvl , hero.life , hero.mana , 100 , 100 );
+        //Статы подкласс лучника рейджер
+        Ranger ranger = new Ranger(hero.lvl, hero.life, hero.mana, 100, 100 , 50);
+
+        //Статы Друида
+        Druid druid  = new Druid(hero.lvl, hero.life, hero.mana, 100, 100);
+
+       
+
+        ListHero add = new ListHero();
+        add.AddHeroes(druid);
+        Console.WriteLine("Хп: " + archer.DefenceLife());
+    }
+}
+
+
